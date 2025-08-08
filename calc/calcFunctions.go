@@ -1,6 +1,8 @@
 package calc
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func Add(a, b int) int {
 	return a + b
@@ -10,12 +12,11 @@ func Subtract(a, b int) int {
 	return a - b
 }
 
-func Divine(a, b int) float64 {
+func Divide(a, b int) (float64, error) {
 	if b == 0 {
-		fmt.Println("Divine by zero is error")
-		return 0
+		return 0, fmt.Errorf("Divide by zero is error")
 	}
-	return float64(a) / float64(b)
+	return float64(a) / float64(b), nil
 }
 
 func Multiply(a, b int) int {
