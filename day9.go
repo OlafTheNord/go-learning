@@ -16,15 +16,13 @@ func main() {
 	switch {
 	case char == "*":
 
-		fmt.Printf("Result: %v", mltpl(firstNum, secNum))
+		fmt.Printf("Result: %v\n", mltpl(firstNum, secNum))
 	case char == "/":
-
-		fmt.Printf("Result: %v", divine(firstNum, secNum))
+		fmt.Printf("Result: %v\n", divine(firstNum, secNum))
 	case char == "+":
-		fmt.Printf("Result: %v", sum(firstNum, secNum))
+		fmt.Printf("Result: %v\n", sum(firstNum, secNum))
 	case char == "-":
-
-		fmt.Printf("Result: %v", notSum(firstNum, secNum))
+		fmt.Printf("Result: %v\n", notSum(firstNum, secNum))
 	default:
 
 		fmt.Println("Something wrong!!!")
@@ -38,6 +36,7 @@ func mltpl(a, b int) int {
 func divine(a, b int) float64 {
 	if b == 0 {
 		fmt.Println("Num cant be zero")
+		return 0
 	}
 	return float64(float64(a) / float64(b))
 }
