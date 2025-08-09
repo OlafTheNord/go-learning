@@ -16,12 +16,13 @@ func main() {
 	fmt.Scan(&b)
 	fmt.Println("Input character: ")
 	fmt.Scan(&operation)
-	result, err := calc.Divide(a, b)
 
 	switch operation {
 	case "/":
+		result, err := calc.Divide(a, b)
 		if err != nil {
 			fmt.Printf("Error: %s\n", err)
+			break
 		}
 		fmt.Printf("Result: %v\n", result)
 	case "*":
