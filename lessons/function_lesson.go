@@ -3,9 +3,8 @@ package lessons
 func IsEven(a int) bool {
 	if a%2 == 0 {
 		return true
-	} else {
-		return false
 	}
+	return false
 }
 
 func Max(a, b int) int {
